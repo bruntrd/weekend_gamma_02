@@ -2,11 +2,19 @@
 function callback(results){
 	console.log(results);
 
-	$(".whatever").append("<div class='newRow row well'</div>")
-	$(".newRow").append("<div class='newUser col-md 3 col-sm-3'>"+results.login+"</div>");
-	$(".newRow").append("<div class='newImage col-md-3 col-sm-3'><img src="+results.avatar_url+" width=150px height=150px></div>");
-	$(".newRow").append("<div class='newUrl col-md 3 col-sm-3'><a href="+results.html_url+">Git Page</a></div>");
-	$(".newRow").append("<div class='newRepo col-md 3 col-sm-3'>"+results.public_repos+"</div>");
+	var $elUser = $(".username").children().last();
+	var $elImage = $(".avatar").children().last();
+	var $elUrl = $(".url").children().last();
+	var $elRepos = $(".repos").children().last();
+	$elUser.append('<p>'+results.login+'</p>');
+	$elImage.append('<p><img src='+results.avatar_url+'width=100px height=100px></p>');
+	$elUrl.append('<p><a href='+results.html_url+'>Git Page</a></div>');
+	$elRepos.append('<p>'+results.public_repos+'</p>');
+
+	// $(".username").append("<div class='newUser col-md 3 col-sm-3'>"+results.login+"</div>");
+	// $(".avatar").append("<div class='newImage col-md-3 col-sm-3'><img src="+results.avatar_url+" width=150px height=150px></div>");
+	// $(".url").append("<div class='newUrl col-md 3 col-sm-3'><a href="+results.html_url+">Git Page</a></div>");
+	// $(".repos").append("<div class='newRepo col-md 3 col-sm-3'>"+results.public_repos+"</div>");
 }
 
 

@@ -4,6 +4,19 @@
 }
 
 body {
-	background-color: #EBF7FB;
+	background-color: #E8E8E8;
+}
 
+p {
+	height:100px;
+}
+.entry {
+	margin-bottom: 20px;
+}
+
+.jumbotron {
+	background-color: #5D5D5D
+}
+.jumbotron h2, .jumbotron small {
+	color: white;
 }
